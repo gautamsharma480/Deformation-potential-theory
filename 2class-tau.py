@@ -2,6 +2,7 @@ import math
 import numpy as np 
 import sys 
 #this code requires the input of temperature, elastic constant (C), deformation potential constant (E_dp) and effective mass (m*) of the carrier.
+# Accepted units (Kelvin, eV/A^3, eV, unit of mass of electron)
 # Elastic constant (C can have different units (C_3D or C_2D), depending on the dimensionality of the material.)
 # Same code can be used to calculate relaxation time in Two-dimension, only formula will change.
 class R_tau:
