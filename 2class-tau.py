@@ -40,7 +40,6 @@ class R_tau:
 		c_3d = 2*self.a2*ry2ev/self.vol
 		print('c_3d (eV/A^3)', c_3d)
 		return c_3d  # eV/A^3 
-	
 
 
 #c_3d = c.c_3d(1100,10)
