@@ -2,6 +2,7 @@
 
 import numpy as np 
 import sys
+# This code is for two-dimensional system
 # a2 (in Ry) is coefficient obtained by fitting the total energy as a function of strain. 
 # Mathematically, (E_total = a0 + a1*x + a2*x^2), where x is strain.
 a2  = float(sys.argv[1])
