@@ -3,6 +3,7 @@ import numpy as np
 import sys 
 #this code requires the input of temperature, elastic constant (C), deformation potential constant (E_dp) and effective mass (m*) of the carrier.
 # Elastic constant (C can have different units (C_3D or C_2D), depending on the dimensionality of the material.)
+# Same code can be used to calculate relaxation time in Two-dimension, only formula will change.
 class R_tau:
 
 	def __init__(self,T,C,E_dp,m):
@@ -27,8 +28,9 @@ class R_tau:
 		self.E_dp = self.E_dp * ev   # Joule 
 		num = (2 * math.sqrt(2*pi) * h_cut_four * self.C)
 		deno = (3 *  ((kBT  * md_e) ** 1.5) * self.E_dp**2)
-		tau   =  num / deno
-		#tau_2d = (h_cut_cube * self.C) / ( kBT  * md_e *  self.E_dp ** 2)
+		tau   =  num / deno # This is for 3D system # npj Computational Materials (2020) 6:149 
+		# in case, you need to compute relaxation time in 2-dimensional system
+		#tau_2d = (h_cut_cube * self.C) / ( kBT  * md_e *  self.E_dp ** 2) # Journal of Electronic Materials volume 50, 1644–1654 (2021)
 		return tau / 1e-15 # fs
 
 	def c_3d(self,vol,a2):
