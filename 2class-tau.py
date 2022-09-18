@@ -35,6 +35,7 @@ class R_tau:
 		return tau / 1e-15 # fs
 
 	def c_3d(self,vol,a2):
+		# This function is obsolete here.
 		ry2ev = 13.605698066
 		bohr2anstrom = 0.529177249
 		bohr2anstrom3 = bohr2anstrom ** 3
